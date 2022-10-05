@@ -4,5 +4,38 @@
   width: 100%;
 }
 
-.nav h1 {
-}
+
+.cards {
+ 
+  display: grid;
+   
+  grid-template-columns: repeat(4, 1fr);
+   
+  grid-auto-rows: auto;
+   
+  grid-gap: 1rem;
+   
+  }
+  
+  .card {
+   
+  border: 2px solid #919090;
+   
+  border-radius: 4px;
+   
+  padding: .5rem;
+   
+  }
+
+  .content {
+    margin: 40px;
+    margin-top: 80px;
+  }
+
+  .font {
+    font-size: 25px;
+
+  }
+  .image{
+    width: 100%;
+  }
