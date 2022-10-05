@@ -18,6 +18,8 @@
   }
   
   .card {
+
+    cursor: pointer;
    
   border: 2px solid #919090;
    
