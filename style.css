@@ -1,43 +1,74 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
 .nav {
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-
 .cards {
- 
   display: grid;
-   
+
   grid-template-columns: repeat(4, 1fr);
-   
+
   grid-auto-rows: auto;
-   
+
   grid-gap: 1rem;
-   
-  }
-  
-  .card {
+}
 
-    cursor: pointer;
-   
+.card {
+  cursor: pointer;
+
   border: 2px solid #919090;
-   
+
   border-radius: 4px;
-   
-  padding: .5rem;
-   
-  }
 
-  .content {
-    margin: 40px;
-    margin-top: 80px;
-  }
+  padding: 0.5rem;
+}
 
-  .font {
-    font-size: 25px;
+.content {
+  margin: 40px;
+  margin-top: 80px;
+}
 
-  }
-  .image{
-    width: 100%;
-  }
+.font {
+  font-size: 25px;
+}
+.image {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+li:last-child {
+  border-right: none;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04aa6d;
+}
