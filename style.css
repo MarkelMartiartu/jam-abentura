@@ -22,11 +22,13 @@ body {
 }
 
 .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   cursor: pointer;
 
-  border: 2px solid #919090;
+  /*border: 2px solid #919090;*/
 
-  border-radius: 4px;
+  border-radius: 10px;
 
   padding: 0.5rem;
 }
@@ -49,8 +51,8 @@ ul {
 }
 
 li {
+  border: 0;
   float: left;
-  border-right: 1px solid #bbb;
 }
 
 li:last-child {
