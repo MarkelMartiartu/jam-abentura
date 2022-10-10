@@ -184,3 +184,19 @@ li a:hover:not(.active) {
   font-size: 2.35em;
   line-height: 115%;
 }
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+
+  grid-auto-rows: auto;
+}
+
+.map {
+  grid-row: 2 / 3;
+}
+
+.map-text {
+  grid-row: 1 / 3;
+}
