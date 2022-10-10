@@ -156,3 +156,31 @@ li a:hover:not(.active) {
   color: #6d697c;
   width: 50%;
 }
+
+.page-content {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.media-columns-video {
+  align-items: center;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.media-columns {
+  align-items: center;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.text-padding {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.text-padding h1 {
+  font-size: 2.35em;
+  line-height: 115%;
+}
