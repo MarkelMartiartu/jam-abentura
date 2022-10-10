@@ -10,11 +10,16 @@
       href="style.css"
       href="https://fonts.googleapis.com/css?family=Lato"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="jam_logo.png" />
   </head>
   <body>
     <div class="nav">
       <ul>
-        <li style="float: left">
+        <li style="float: left; border: 0px">
           <img
             src="jam_logo.png"
             height="45px"
@@ -30,7 +35,7 @@
     </div>
     <div class="content font">
       <h2 style="text-align: center">Bizi pirinioak!</h2>
-      <h3 id="aktibitateak">Gure eskaintza</h3>
+      <h2 id="aktibitateak">Gure eskaintza</h2>
       <div class="cards">
         <div class="card font" onclick="location.href='aktibitateak/tirolina'">
           <img class="image" src="argazkiak/tirolina.jpg" />
@@ -39,11 +44,9 @@
             Aire zabaleko jarduera bat, ingurune paregabean, bakarka edo
             taldeka, ziur errepikatuko duzula...
           </p>
-
-          <br />
           <div class="center">
             <button class="button">
-              <span>Button</span>
+              <span>Erreserbatu</span>
             </button>
           </div>
         </div>
@@ -57,7 +60,7 @@
 
           <div class="center">
             <button class="button">
-              <span>Button</span>
+              <span>Erreserbatu</span>
             </button>
           </div>
         </div>
@@ -73,8 +76,8 @@
           </p>
 
           <div class="center">
-            <button class="button">
-              <span>Button</span>
+            <button class="button" style="background-color: salmon">
+              <span>Eskaintza agortuta</span>
             </button>
           </div>
         </div>
@@ -88,17 +91,26 @@
 
           <div class="center">
             <button class="button">
-              <span>Button</span>
+              <span>Erreserbatu</span>
             </button>
           </div>
         </div>
       </div>
-      <h3 id="kontaktua">Kontaktua</h3>
     </div>
-    <div class="">
-      <p>Gure numeroa:987456321</p>
-      <br />
+    <div class="foot">
+      <h2>Kontaktua</h2>
+      <div class="foot-columns">
+        <p><u>+34 942 10 34 22</u></p>
+        <a href="mailto:kontaktua@jam.eus" style="color: white"
+          ><p><u>kontaktua@jam.eus</u></p></a
+        >
+        <p>Otaola Hiribidea, 29<br />20600 Eibar, Gipuzkoa</p>
+      </div>
+      <hr />
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-youtube-play"></i>
+      <i class="fa fa-facebook"></i>
     </div>
-    <div class=""><p>Email:JAM@gmail.com</p></div>
   </body>
 </html>

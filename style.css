@@ -22,11 +22,13 @@ body {
 }
 
 .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   cursor: pointer;
 
-  border: 2px solid #919090;
+  /*border: 2px solid #919090;*/
 
-  border-radius: 4px;
+  border-radius: 10px;
 
   padding: 0.5rem;
 }
@@ -36,9 +38,6 @@ body {
   margin-top: 80px;
 }
 
-.font {
-  font-size: 25px;
-}
 .image {
   width: 100%;
 }
@@ -52,8 +51,8 @@ ul {
 }
 
 li {
+  border: 0;
   float: left;
-  border-right: 1px solid #bbb;
 }
 
 li:last-child {
@@ -78,7 +77,7 @@ li a:hover:not(.active) {
 
 .card-kontent {
   font-family: "Open Sans", serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /*Botoia*/
@@ -125,4 +124,35 @@ li a:hover:not(.active) {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.foot {
+  padding: 50px;
+  color: white;
+  background-color: #393548;
+  text-align: center;
+}
+
+.foot i {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 34px;
+}
+
+.foot h2 {
+  text-align: start;
+}
+
+.foot-columns {
+  align-items: center;
+  font-size: 22px;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.foot hr {
+  color: #6d697c;
+  width: 50%;
 }
