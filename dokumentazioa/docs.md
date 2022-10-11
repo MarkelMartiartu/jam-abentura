@@ -1,5 +1,5 @@
 ## Garapenerako ingurunea
-IDE gisa **Visual Studio Code** erabili dugu, web garapen esperientzia hobea izateko **Prettier** testu formateatzaile gehigarria, **Live Server** eta **Markdown**-erako gehigarriak erabili ditugu.
+IDE gisa **Visual Studio Code** erabili dugu, web garapen esperientzia hobea izateko **Prettier** testu formateatzaile, **Live Server** eta **Markdown**-erako gehigarriak erabili ditugu.
 
 Datu basea diseinatzeko **Microsoft Access** programa erabili dugu.
 
@@ -133,4 +133,12 @@ Sagua gainetik pasatzerakoan hainbat transformazio egiten ditu, hau da, mugitu e
 Footerrean datuak eta ikonoak berriro ere grid batekin alineatu ditugu.\
 Emailaren helbidea klikatuz gero momentuan mail bat bialtzeko aukera ematen du "mailto:" formatua erabili dugulako.\
 Sare sozialetako ikonoak *FontAwesome* letra-tipotik datoz.
+
+## Jarduera orriak
+Jardueraren orriak testura orientatuta daudenez web-egunkari bateko diseinuan inspiratu gara, erdian, paper itxurako lauki baten kokatzen da testua eta irudiak. Prezio aukera edo aukerak karta itxurako lauki batzutan daude ere. Bideoak Youtubetik txertatu ditugu.
+![](argazkiak/jarduera_orria.png)
+
+# Organizazioa
+![](argazkiak/trello.png)
+Trello izan da organizatzeko erabili dugun baliabide garrantzitsuena, bertan garapenaren prozesu guztia ikus daiteke. Zirriborroetatik hasita azken detaileetaraino.
 
