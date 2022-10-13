@@ -39,7 +39,6 @@ body {
 
 .content {
   margin: 40px;
-  margin-top: 80px;
 }
 
 .image {
@@ -204,4 +203,20 @@ li a:hover:not(.active) {
   padding-left: 40px;
   padding-right: 40px;
   grid-column: 4 / span 2;
+}
+
+.atzeko-irudia {
+  filter: brightness(0.85);
+  height: 550px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.atzekoa-container {
+  margin-top: 46px;
+  text-align: center;
+  color: white;
+}
+
+.atzekoa-centered {
 }
