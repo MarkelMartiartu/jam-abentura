@@ -182,6 +182,7 @@ li a:hover:not(.active) {
   margin-right: 18%;
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 3.5rem;
   background-color: white;
 }
 .text-padding h1 {
