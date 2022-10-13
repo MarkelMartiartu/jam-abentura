@@ -5,12 +5,6 @@ body {
   padding: 0;
 }
 
-.nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 .cards {
   display: grid;
 
@@ -41,7 +35,14 @@ body {
   margin: 40px;
 }
 
+/*TO-DO ???*/
 .image {
+  width: 100%;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
   width: 100%;
 }
 
@@ -210,13 +211,31 @@ li a:hover:not(.active) {
   height: 550px;
   width: 100%;
   object-fit: cover;
+  object-position: top;
+
+  /*Copiadisima de googel nipa funtziona pero a ver*/
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: none;
 }
 
+/*Hasierako titulua argazkiakin*/
+
 .atzekoa-container {
-  margin-top: 46px;
-  text-align: center;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.atzekoa-edukia {
+  position: absolute; text-align: center;
   color: white;
 }
 
-.atzekoa-centered {
+.atzekoa-edukia h1{
+  font-size: 3rem;
 }
