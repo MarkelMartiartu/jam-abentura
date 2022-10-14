@@ -51,6 +51,13 @@ Barruko elementuak *unordered list* baten barruan sartzen ditugu eta irudiko "bl
         background-color: #393548;
     }
 
+### Mapa
+![nav bar-a](argazkiak/Mapa.PNG)
+
+Pentsatu duguna izan da aktibitate bakoitzaren kokapena mapan jartzea eta bakoitzari kolore desberdina jartzea.
+
+Google my maps erabili dugu, ondoren aktibitate bakoitzan kokapena. Kokapen guztiak ipini ondoren iframe etiketaren bidez mapa txertatu dugu orrian.
+
 ### Kartak
 ![](argazkiak/kartak.png)
 
