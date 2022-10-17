@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Garapenerako ingurunea</title>
+    <link type="text/css" rel="stylesheet" href="assets/css/github-markdown.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/pilcrow.css">
+    <link type="text/css" rel="stylesheet" href="assets/css/hljs-github.min.css"/>
+  </head>
+  <body>
+    <article class="markdown-body"><h1 id="garapenerako-ingurunea"><a class="header-link" href="#garapenerako-ingurunea"></a>Garapenerako ingurunea</h1>
+<p>Proiektu hau burutzeko <strong>CSS</strong> eta <strong>HTML</strong> hizkuntzak bakarrik erabili ahal genituen.</p>
+<p>IDE gisa <strong>Visual Studio Code</strong> erabili dugu, web garapen esperientzia hobea izateko <strong>Prettier</strong> testu formateatzaile, <strong>Live Server</strong> eta <strong>Markdown</strong>-erako gehigarriekin.</p>
+<p>Datu basea diseinatzeko <strong>Microsoft Access</strong> programa erabili dugu.</p>
+<p>Webgunea desplegatzeko <strong>Nginx</strong> zerbitzaria aukeratu dugu.</p>
+<p>Mapa interaktiboa <strong>Google Maps</strong>-en egin dugu eta irudiak <strong>GIMP</strong>-en editatu.</p>
+<p>Azkenik, <strong>Trello</strong> plataforma erabili dugu gure artean organizatzeko eta bertsio kontrolerako <strong>Git</strong> softwarea, errepositorioa <strong>GitHub</strong>-en hosteatuz.</p>
+<h1 id="webgunea"><a class="header-link" href="#webgunea"></a>Webgunea</h1>
+<h3 id="egitura"><a class="header-link" href="#egitura"></a>Egitura</h3>
+<ul class="list">
+<li>Hasierako orria<ul class="list">
+<li>Aurkezpen testua</li>
+<li>Aktibitate kartak</li>
+<li>Mapa interaktiboa</li>
+</ul>
+</li>
+<li>Aktibitateen orriak<ol class="list">
+<li>Jarduera<ul class="list">
+<li>Azalpena</li>
+<li>Arauak</li>
+<li>Prezioa</li>
+<li>Bideoa edo/eta argazkiak</li>
+</ul>
+</li>
+<li>Jarduera<ul class="list">
+<li>...</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>Dokumentazioa<ul class="list">
+<li>(Ikus. horri honen indizea)</li>
+</ul>
+</li>
+</ul>
+<h3 id="nabigazio-barra"><a class="header-link" href="#nabigazio-barra"></a>Nabigazio barra</h3>
+<p class="img-container"><img src="argazkiak/nav.png" alt=""></p>
+<p>Nabigazio barra orri guztietan erakusten da.
+Bertan klikatuz (Ezkerretik eskubira) orri nagusira, kontaktua atalera eta aktibitateen atalera birbidaltzen zaitu.</p>
+<pre class="hljs"><code><span class="hljs-selector-class">.nav</span> {
+    <span class="hljs-attribute">position</span>: fixed;
+    <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;
+}</code></pre><p>Posizio finko bat duen div bat besterik ez da.<br>Barruko elementuak <em>unordered list</em> baten barruan sartzen ditugu eta irudiko &quot;bloke&quot; itxura ematen diogu:</p>
+<pre class="hljs"><code><span class="hljs-selector-tag">ul</span> {
+    <span class="hljs-attribute">list-style-type</span>: none;
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">overflow</span>: hidden;
+    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#393548</span>;
+}</code></pre><h3 id="mapa"><a class="header-link" href="#mapa"></a>Mapa</h3>
+<p class="img-container"><img src="argazkiak/Mapa.PNG" alt=""></p>
+<p>Pentsatu duguna izan da aktibitate bakoitzaren kokapena mapan jartzea eta bakoitzari kolore desberdina jartzea.</p>
+<p>Google my maps erabili dugu, ondoren aktibitate bakoitzan kokapena. Kokapen guztiak ipini ondoren iframe etiketaren bidez mapa txertatu dugu orrian.</p>
+<h3 id="kartak"><a class="header-link" href="#kartak"></a>Kartak</h3>
+<p class="img-container"><img src="argazkiak/kartak.png" alt=""></p>
+<p>Kartak CSS-ko <em>grid</em> baten barruan doazen elementu klikagarriak dira.<br>Lehenik eta behin <em>grid</em> klase hori sortu behar dugu:</p>
+<pre class="hljs"><code><span class="hljs-selector-class">.cards</span> {
+    <span class="hljs-attribute">display</span>: grid;
+
+    grid-template-<span class="hljs-attribute">columns</span>: <span class="hljs-built_in">repeat</span>(<span class="hljs-number">4</span>, <span class="hljs-number">1</span>fr);
+
+    grid-<span class="hljs-attribute">auto</span>-rows: auto;
+
+    grid-gap: <span class="hljs-number">1rem</span>;
+}</code></pre><p>Lau zutabeko sare bat sortu dugu eta <em>grid-auto-rows</em> propietatearen bidez elementu gehiago sartuz gero beste lerro batean joango dira kokatzen.</p>
+<p class="img-container"><img src="argazkiak/karta.png" alt=""></p>
+<pre class="hljs"><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card&quot;</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">&quot;location.href=&#x27;aktibitateak/parkea&#x27;&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;image&quot;</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;argazkiak/hartzak.jpg&quot;</span> /&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;card-text&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>Hartz Parkea. Abentura eta dibertsioa<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+            Hartzak, marmotak, ahuntzak, sarrioak,
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;center&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;button&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Erreserbatu<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><p><em>Card</em> klaseak padding eta border batzuk besterik ez ditu.<br>Karta bakoitzari <em>onClick()</em> funtzioarekin beste orrialde batera berbideratzeko agindua ematen diogu.<br>Botoia berriz klase korapilotsuagoa da, animazioa daukalako</p>
+<pre class="hljs"><code><span class="hljs-selector-class">.button</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">240px</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-number">#46ad84</span>;
+    <span class="hljs-attribute">text-align</span>: center;
+    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">45px</span>;
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">12px</span>;
+    <span class="hljs-attribute">color</span>: <span class="hljs-number">#fff</span>;
+    <span class="hljs-attribute">cursor</span>: pointer;
+    <span class="hljs-attribute">font-weight</span>: bold;
+    <span class="hljs-attribute">border</span>: none;
+}
+
+<span class="hljs-selector-class">.button</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">animation</span>: shake <span class="hljs-number">0.82s</span> <span class="hljs-built_in">cubic-bezier</span>(<span class="hljs-number">0.36</span>, <span class="hljs-number">0.07</span>, <span class="hljs-number">0.19</span>, <span class="hljs-number">0.97</span>) both;
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate3d</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-attribute">perspective</span>: <span class="hljs-number">1000px</span>;
+    }
+
+    <span class="hljs-keyword">@keyframes</span> shake {
+    <span class="hljs-number">10%</span>,
+    <span class="hljs-number">90%</span> {
+        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate3d</span>(-<span class="hljs-number">1px</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    }
+    <span class="hljs-number">20%</span>,
+    <span class="hljs-number">80%</span> {
+        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate3d</span>(<span class="hljs-number">2px</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    }
+    <span class="hljs-number">30%</span>,
+    <span class="hljs-number">50%</span>,
+    <span class="hljs-number">70%</span> {
+        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate3d</span>(-<span class="hljs-number">4px</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    }
+    <span class="hljs-number">40%</span>,
+    <span class="hljs-number">60%</span> {
+        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate3d</span>(<span class="hljs-number">4px</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+    }
+}</code></pre><p>Sagua gainetik pasatzerakoan hainbat transformazio egiten ditu, hau da, mugitu egiten da.</p>
+<h2 id="footer-a"><a class="header-link" href="#footer-a"></a>Footer-a</h2>
+<p class="img-container"><img src="argazkiak/footer.png" alt=""></p>
+<p>Footerrean datuak eta ikonoak berriro ere grid batekin alineatu ditugu.<br>Emailaren helbidea klikatuz gero momentuan mail bat bialtzeko aukera ematen du &quot;mailto:&quot; formatua erabili dugulako.<br>Sare sozialetako ikonoak <em>FontAwesome</em> letra-tipotik datoz.</p>
+<h2 id="jarduera-orriak"><a class="header-link" href="#jarduera-orriak"></a>Jarduera orriak</h2>
+<p>Jardueraren orriak testura orientatuta daudenez web-egunkari bateko diseinuan inspiratu gara, erdian, paper itxurako lauki baten kokatzen da testua eta irudiak. Prezio aukera edo aukerak karta itxurako lauki batzutan daude ere. Bideoak Youtubetik txertatu ditugu.</p>
+<p class="img-container"><img src="argazkiak/jarduera_orria.png" alt=""></p>
+<h1 id="organizazioa"><a class="header-link" href="#organizazioa"></a>Organizazioa</h1>
+<h2 id="kanban"><a class="header-link" href="#kanban"></a>Kanban</h2>
+<p class="img-container"><img src="argazkiak/trello.png" alt=""></p>
+<p>Trello izan da organizatzeko erabili dugun baliabide garrantzitsuena, bertan garapenaren prozesu guztia ikus daiteke. Zirriborroetatik hasita azken detaileetaraino.</p>
+<h2 id="git"><a class="header-link" href="#git"></a>Git</h2>
+<p class="img-container"><img src="argazkiak/git.jpg" alt=""></p>
+<p>Git bertsio kontrolerako sistema ezagunena da. Gure arten kodea zinkronizatu eta bertsioak kontrolatzeko erabili dugu. <em>Repository</em>a GitHub plataforman hosteatuta dago.<br>Aldaketak <em>branch</em> ezberdinetan egin ditugu, bukatutakoan adar nagusiarekin elkartuz (merge).</p>
+<h1 id="datu-basea"><a class="header-link" href="#datu-basea"></a>Datu basea</h1>
+<p>Datu basera sartzerakoan honako menu nagusi hau bistaratzen da (autoexec fitxategiaren bidez):</p>
+<p class="img-container"><img src="argazkiak/form.PNG" alt=""></p>
+<p>Bertan honako aukera hauek ditugu exekutatzeko:</p>
+<ul class="list">
+<li>Erregistro berria sortu</li>
+<li>Erregistro bat eguneratu/aldatu</li>
+<li>Prezioak inflaziora moldatu</li>
+<li>Txostena bistaratu</li>
+<li>Datu basea gorde eta aplikaziotik irten</li>
+</ul>
+<h2 id="erregistroa-sortzeaeguneratzea"><a class="header-link" href="#erregistroa-sortzeaeguneratzea"></a>Erregistroa sortzea/eguneratzea</h2>
+<h2 id="prezioak-inflaziora-moldatzea"><a class="header-link" href="#prezioak-inflaziora-moldatzea"></a>Prezioak inflaziora moldatzea</h2>
+<p>Gaur egun daukagun inflazioaren ondorioz garrantzitsua iruditu zaigu prozesu hau automatikoki egiteko sistema bat sortzea.<br>Menu nagusiko inflazioaren programaren botoia klikatuz gero honako menu hau bistaratuko da, <strong>parametro</strong> honek urteko inflazioaren zenbaki dezimala hartzen du:</p>
+<p class="img-container"><img src="argazkiak/inflazioa_dialog.PNG" alt=""></p>
+<p>Sartu diogun datuarekin taulako <ins>Prezioa</ins> eremuaren balio berria <strong>kalkutzen</strong> du formula hau erabiliz:</p>
+<p class="img-container"><img src="argazkiak/inflazioa_formula.PNG" alt=""></p>
+<h2 id="datu-basearen-beste-ezaugarri-batzuk"><a class="header-link" href="#datu-basearen-beste-ezaugarri-batzuk"></a>Datu basearen beste ezaugarri batzuk</h2>
+<ul class="list">
+<li>Debalde diren jarduera guztiak borratu daitezke <strong>delete query</strong> baten bidez. (Akzio kontsulten erronka)</li>
+<li><strong>Taldekatze</strong> kontsulta batekin jarduerak egiteko aukeran dauden toki guztiak listatu daitezke.</li>
+</ul>
+<h1 id="despliegea"><a class="header-link" href="#despliegea"></a>Despliegea</h1>
+<p>Windows sistemetarako oharra:</p>
+<blockquote>
+<p>Nginx zerbitzaria instalatzeko WSL azpisistema behar da.
+Hasteko bila ezazu &quot;Turn Windows features on&quot; programa bilatzailean.
+Programa ireki eta Windows Subsystem for Linux aktibatu.
+WSL-ren instalazioa burutu ostean Ubuntu distribuzia instalatu dezakezu Microsoft Storetik.</p>
+</blockquote>
+<p>Ubuntu sistema bat dugularik, Nginx instalatu dezakegu terminalaren bidez komando hauek exekutatuz:</p>
+<pre class="hljs"><code>sudo<span class="hljs-built_in"> add-apt-repository </span>ppa:nginx/stable
+
+sudo apt-get update
+
+sudo apt-get install -y nginx</code></pre><p>Zerbitzaria hasteko:</p>
+<pre class="hljs"><code>sudo service nginx <span class="hljs-literal">start</span></code></pre><p>Gure nabigatzailean <strong>localhost:80</strong> url sartu eta honako orri hau agertzen bada ondo joan da instalazioa:</p>
+<p class="img-container"><img src="argazkiak/nginx.png" alt=""></p>
+    </article>
+  </body>
+</html>
