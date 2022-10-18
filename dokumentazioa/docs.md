@@ -43,6 +43,11 @@ Bertan honako aukera hauek ditugu exekutatzeko:
 
 ## Erregistroa sortzea/eguneratzea
 
+![](argazkiak/edidatu_form.PNG)
+
+Datu basean aldaketak formulario honen bidez egin daitezke modu erraz batean.
+Erregistro berriak sortzeko ere balio du.
+
 ## Prezioak inflaziora moldatzea
 
 Gaur egun daukagun inflazioaren ondorioz garrantzitsua iruditu zaigu prozesu hau automatikoki egiteko sistema bat sortzea.\
