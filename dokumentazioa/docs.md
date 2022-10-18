@@ -12,9 +12,68 @@ Mapa interaktiboa **Google Maps**-en egin dugu eta irudiak **GIMP**-en editatu.
 
 Azkenik, **Trello** plataforma erabili dugu gure artean organizatzeko eta bertsio kontrolerako **Git** softwarea, errepositorioa **GitHub**-en hosteatuz.
 
+## Organizazioa
+
+### Kanban
+
+![](argazkiak/trello.png)
+
+Trello izan da organizatzeko erabili dugun baliabide garrantzitsuena, bertan garapenaren prozesu guztia ikus daiteke. Zirriborroetatik hasita azken detaileetaraino.
+
+### Git
+
+![](argazkiak/git.jpg)
+
+Git bertsio kontrolerako sistema ezagunena da. Gure arten kodea zinkronizatu eta bertsioak kontrolatzeko erabili dugu. *Repository*a GitHub plataforman hosteatuta dago.\
+Aldaketak _branch_ ezberdinetan egin ditugu, bukatutakoan adar nagusiarekin elkartuz (merge).
+
+# Datu basea
+
+Datu basera sartzerakoan honako menu nagusi hau bistaratzen da (autoexec fitxategiaren bidez):
+
+![](argazkiak/form.PNG)
+
+Bertan honako aukera hauek ditugu exekutatzeko:
+
+- Erregistro berria sortu
+- Erregistro bat eguneratu/aldatu
+- Prezioak inflaziora moldatu
+- Txostena bistaratu
+- Datu basea gorde eta aplikaziotik irten
+
+## Erregistroa sortzea/eguneratzea
+
+## Prezioak inflaziora moldatzea
+
+Gaur egun daukagun inflazioaren ondorioz garrantzitsua iruditu zaigu prozesu hau automatikoki egiteko sistema bat sortzea.\
+Menu nagusiko inflazioaren programaren botoia klikatuz gero honako menu hau bistaratuko da, **parametro** honek urteko inflazioaren zenbaki dezimala hartzen du:
+
+![](argazkiak/inflazioa_dialog.PNG)
+
+Sartu diogun datuarekin taulako <ins>Prezioa</ins> eremuaren balio berria **kalkutzen** du formula hau erabiliz:
+
+![](argazkiak/inflazioa_formula.PNG)
+
+## Datu basearen beste ezaugarri batzuk
+
+- Debalde diren jarduera guztiak borratu daitezke **delete query** baten bidez. (Akzio kontsulten erronka)
+- **Taldekatze** kontsulta batekin jarduerak egiteko aukeran dauden toki guztiak listatu daitezke.
+
 # Webgunea
 
-### Egitura
+[**Egin klik hemen webgunera joateko**](../../)
+
+## Diseinua
+
+Webgunea eraikitzen hasi aurretik diseinua garbi izatea nahi genuen, aldaketak gero egitea zailagoa da eta.
+
+![](argazkiak/diseinua_1.png)
+
+![](argazkiak/diseinua_2.png)
+
+Ikusten den bezala, webgunearen bukaerako diseinua ez da asko aldatu hasieran egin genuen prototipotik.
+
+## Egitura
 
 - Hasierako orria
   - Aurkezpen testua
@@ -161,53 +220,6 @@ Jardueraren orriak testura orientatuta daudenez web-egunkari bateko diseinuan in
 
 ![](argazkiak/jarduera_orria.png)
 
-# Organizazioa
-
-## Kanban
-
-![](argazkiak/trello.png)
-
-Trello izan da organizatzeko erabili dugun baliabide garrantzitsuena, bertan garapenaren prozesu guztia ikus daiteke. Zirriborroetatik hasita azken detaileetaraino.
-
-## Git
-
-![](argazkiak/git.jpg)
-
-Git bertsio kontrolerako sistema ezagunena da. Gure arten kodea zinkronizatu eta bertsioak kontrolatzeko erabili dugu. *Repository*a GitHub plataforman hosteatuta dago.\
-Aldaketak _branch_ ezberdinetan egin ditugu, bukatutakoan adar nagusiarekin elkartuz (merge).
-
-# Datu basea
-
-Datu basera sartzerakoan honako menu nagusi hau bistaratzen da (autoexec fitxategiaren bidez):
-
-![](argazkiak/form.PNG)
-
-Bertan honako aukera hauek ditugu exekutatzeko:
-
-- Erregistro berria sortu
-- Erregistro bat eguneratu/aldatu
-- Prezioak inflaziora moldatu
-- Txostena bistaratu
-- Datu basea gorde eta aplikaziotik irten
-
-## Erregistroa sortzea/eguneratzea
-
-## Prezioak inflaziora moldatzea
-
-Gaur egun daukagun inflazioaren ondorioz garrantzitsua iruditu zaigu prozesu hau automatikoki egiteko sistema bat sortzea.\
-Menu nagusiko inflazioaren programaren botoia klikatuz gero honako menu hau bistaratuko da, **parametro** honek urteko inflazioaren zenbaki dezimala hartzen du:
-
-![](argazkiak/inflazioa_dialog.PNG)
-
-Sartu diogun datuarekin taulako <ins>Prezioa</ins> eremuaren balio berria **kalkutzen** du formula hau erabiliz:
-
-![](argazkiak/inflazioa_formula.PNG)
-
-## Datu basearen beste ezaugarri batzuk
-
-- Debalde diren jarduera guztiak borratu daitezke **delete query** baten bidez. (Akzio kontsulten erronka)
-- **Taldekatze** kontsulta batekin jarduerak egiteko aukeran dauden toki guztiak listatu daitezke.
-
 # Despliegea
 
 Windows sistemetarako oharra:
@@ -232,3 +244,10 @@ Zerbitzaria hasteko:
 Gure nabigatzailean **localhost:80** url sartu eta honako orri hau agertzen bada ondo joan da instalazioa:
 
 ![](argazkiak/nginx.png)
+
+---
+
+    Aurkezpenerako oharra:
+    Sareko ordenagailu bateko nabigatzailean IP hau sartuz gero gure webgunea azalduko da:
+
+<span style="font-size:72px; text-align: center">192.168.72.16</span>
